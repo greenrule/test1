@@ -21,6 +21,12 @@ public class RegistrationFormWithPageObjectsTests {
     String state = "NCR";
     String city = "Delhi";
     String picturePath = "img/1.jpg";
+    String testDay = "30";
+    String testMonth = "July";
+    String testYear = "2008";
+    String gender = "Male";
+    String hobbies = "Sports";
+    String url = "1.jpg";
 
     @BeforeAll
     static void beforeAll() {
@@ -35,11 +41,11 @@ public class RegistrationFormWithPageObjectsTests {
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)
-                .genderClick()
+                .chooseGender(gender)
                 .setUserNumber(userNumber);
-        registrationPage.setBirthDay("30", "July", "2008");
+        registrationPage.setBirthDay(testDay, testMonth, testYear);
         registrationPage.setSubjectsInput(subjectsText)
-                .sportsClick()
+                .chooseHobbies(hobbies)
                 .uploadPicture(picturePath)
                 .setCurrentAddress(currentAddress)
                 .selectState(state)
@@ -49,11 +55,11 @@ public class RegistrationFormWithPageObjectsTests {
 
         registrationPage.checkForm("Student Name", firstName + " "+ lastName)
                         .checkForm("Student Email", userEmail)
-                        .checkForm("Gender", "Male")
+                        .checkForm("Gender", gender)
                         .checkForm("Mobile", userNumber)
-                        .checkForm("Date of Birth", "30 July,2008")
-                        .checkForm("Hobbies", "Sports")
-                        .checkForm("Picture", "1.jpg")
+                        .checkForm("Date of Birth", testDay + " "+testMonth + "," +testYear)
+                        .checkForm("Hobbies", hobbies)
+                        .checkForm("Picture", url)
                         .checkForm("Address", currentAddress)
                         .checkForm("State and City", state + " "+ city);
 
