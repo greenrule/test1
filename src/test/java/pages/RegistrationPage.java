@@ -24,8 +24,6 @@ public class RegistrationPage {
     currentAddressInput =  $("#currentAddress"),
     resultsTable = $(".table-responsive"),
     dateOfBirthInput = $("#dateOfBirthInput"),
-    genderButton = $(byText("Male")),
-    sportButton = $(byText("Sports")),
     selectState = $(byText("Select State")),
     selectCity= $(byText("Select City")),
     uploadPictureInput = $("#uploadPicture"),
@@ -69,13 +67,13 @@ public class RegistrationPage {
         calendarComponent.setDay(day, month, year);
     }
 
-    public RegistrationPage genderClick() {
-        genderButton.click();
+    public RegistrationPage chooseGender(String gender) {
+        $(byText(gender)).click();
         return this;
     }
 
-    public RegistrationPage sportsClick() {
-        sportButton.click();
+    public RegistrationPage chooseHobbies(String hobbies) {
+        $(byText(hobbies)).click();
         return this;
     }
 
