@@ -23,15 +23,16 @@ public class DragAndDrop {
 
     @Test
      //работает
-    void DragAndDrop() {
+    void dragAndDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo("#column-b");
         //проверка
         $("#column-b").$("header").shouldHave(text("A"));
+        $("#column-a").$("header").shouldHave(text("B"));
     }
 
     /* не работает(???)
-    void DragAndDropWithActions() {
+    void dragAndDropWithActions() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         SelenideElement elementA = $("#column-a");
         SelenideElement elementB = $("#column-b");

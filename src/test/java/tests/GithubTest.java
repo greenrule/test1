@@ -19,7 +19,7 @@ public class GithubTest {
     }
 
     @Test
-    void PagesContentSoftAssertionsAndJUnit5() {
+    void pagesContentSoftAssertionsAndJUnit5() {
         //Откройте страницу selenide
         open("/selenide/selenide");
         // Перейдите в раздел Wiki проекта
