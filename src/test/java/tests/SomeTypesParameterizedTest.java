@@ -35,12 +35,12 @@ public class SomeTypesParameterizedTest {
 
     /*@ValueSource используются, если в тесте передается одно значение,
     можно использовать не только строку, но и другие значения*/
-        @ValueSource(strings = {"Origin", "Use"})
-        @ParameterizedTest(name = "Проверка, что работает переход по табам на странице \"{0}\"")
-        public void switchOverTabs(String testData) {
-            open("https://demoqa.com/tabs");
-            $(byText(testData)).click();
-        }
+    @ValueSource(strings = {"Origin", "Use"})
+    @ParameterizedTest(name = "Проверка, что работает переход по табам на странице \"{0}\"")
+    public void switchOverTabs(String testData) {
+        open("https://demoqa.com/tabs");
+        $(byText(testData)).click();
+    }
 
     /*@CsvSource используются, если в тесте передается ключ -> значение*/
     @CsvSource(value = {
