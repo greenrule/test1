@@ -10,6 +10,6 @@ public class For8HW {
         assertTrue(3 > 1);
     }
     void assertFalseTest() {
-        assertTrue(3 < 1);
+        assertTrue(3 < 2);
     }
 }
