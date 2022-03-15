@@ -9,13 +9,28 @@ repositories {
 
 dependencies {
     testImplementation(
+            //подключаем Селенид
             'com.codeborne:selenide:6.3.3',
+            //подключаем junit5
+            'org.junit.jupiter:junit-jupiter:5.8.2',
+            //подключаем для работы с аллюром
             'io.qameta.allure:allure-selenide:2.17.2',
-            'org.junit.jupiter:junit-jupiter:5.8.2'
+            //подключаем для работы с файлами
+            'org.assertj:assertj-core:3.22.0',
+            //для работы с pdf-файлами
+            'com.codeborne:pdf-test:1.7.0',
+            //для работы с xls-файлами
+            'com.codeborne:xls-test:1.4.0',
+            //для работы с csv-файлами
+            'com.opencsv:opencsv:5.6',
+            //для работы с json-файлами
+            'com.google.code.gson:gson:2.9.0',
+            //разбор json  файла библиотекой Jackson
+            'com.fasterxml.jackson.core:jackson-core:2.13.1'
     )
     testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
 }
-
+//подключаем для работы с аллюром
 allure {
     adapter {
         aspectjWeaver.set(true)

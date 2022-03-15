@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class WebSteps {
+public class WebStepsTest {
 
     @Step("Открываем главную страницу")
     public void openMainPage() {

@@ -25,7 +25,7 @@ public class testAnnotatedSteps {
 
         void testAnnotated() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        WebSteps steps = new WebSteps();
+        WebStepsTest steps = new WebStepsTest();
         steps.openMainPage();
         steps.searchForRepository(REPOSITORY);
         steps.openRepository(REPOSITORY);
